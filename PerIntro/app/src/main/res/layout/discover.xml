@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white">
+    <ProgressBar
+        android:id="@+id/pg_web"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:progressDrawable="@drawable/pg"
+        android:visibility="gone"
+
+        />
+    <WebView
+        android:id="@+id/wb_discover"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </WebView>
+
+
+    <com.example.perintro.override.TextMarquee
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:singleLine="true"
+        android:background="@color/black"
+        android:textColor="@color/grey"
+        android:text="网站仅在本人电脑启动时开放，且无法满足多人同时访问，503属正常现象，请刷新重试或换个时间段访问" />
+
+
+</LinearLayout>

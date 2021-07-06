@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/frame"
+        >
+
+        <TextView
+            android:id="@+id/tv_data_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="13sp"
+            android:text="请选择数据库中的人员：" />
+
+        <Spinner
+            android:id="@+id/sp_person"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="55dp"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        tools:layout_editor_absoluteX="20dp">
+
+        <Switch
+            android:id="@+id/sw_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:switchMinWidth="60dp"
+            android:switchTextAppearance="@style/s_true"
+            android:textColor="@color/white"
+            android:layout_marginRight="40dp"
+            android:text="是否编辑"
+            android:textOff="关闭"
+            android:textOn="打开"
+            android:textSize="15sp"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#88AAAAFF"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sw_edit">
+        </View>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <Switch
+            android:id="@+id/sw_wonderful"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:switchMinWidth="60dp"
+            android:switchTextAppearance="@style/s_true"
+            android:textColor="@color/white"
+            android:layout_marginRight="40dp"
+            android:text="奇妙的开关"
+            android:textOff="真实"
+            android:textOn="虚假"
+            android:textSize="15sp"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#88AAAAFF"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sw_wonderful">
+
+
+        </View>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tv_wonderful_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="真实"
+            android:textColor="#939393"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/sw_wonderful"
+            app:layout_constraintEnd_toEndOf="@+id/sw_wonderful"
+            app:layout_constraintTop_toTopOf="@id/sw_wonderful" />
+
+        <TextView
+            android:id="@+id/tv_wonderful_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:text="虚假"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/sw_wonderful"
+            app:layout_constraintEnd_toEndOf="@+id/sw_wonderful"
+            app:layout_constraintTop_toTopOf="@id/sw_wonderful" />
+
+        <Switch
+            android:id="@+id/sw_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:switchMinWidth="60dp"
+            android:switchTextAppearance="@style/s_true"
+            android:textColor="@color/white"
+            android:layout_marginRight="40dp"
+            android:text="生成后保存简历截图（懒）"
+            android:textOff="关闭"
+            android:textOn="打开"
+            android:textSize="15sp"
+            android:thumb="@drawable/thumb"
+            android:track="@drawable/track"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:background="#88aaaaff"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.966">
+        </View>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <TextView
+            android:id="@+id/tv_sound_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="关闭"
+            android:textColor="#939393"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/sw_save"
+            app:layout_constraintEnd_toEndOf="@+id/sw_save"
+            app:layout_constraintTop_toTopOf="@id/sw_save" />
+
+
+        <TextView
+            android:id="@+id/tv_sound_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:text="打开"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/sw_save"
+            app:layout_constraintEnd_toEndOf="@+id/sw_save"
+            app:layout_constraintTop_toTopOf="@id/sw_save" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1.0" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="文字大小（懒）"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/rg_pic_size"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+        <RadioGroup
+            android:id="@+id/rg_pic_size"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:checkedButton="@id/rb_mid"
+            android:orientation="horizontal"
+            android:background="@drawable/radiogroup_background"
+            app:layout_constraintBottom_toBottomOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4">
+
+            <RadioButton
+                android:id="@+id/rb_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:gravity="center"
+                android:text="大"
+                android:background="@drawable/rb_high_gray_background"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_mid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="中"
+                android:textColor="@color/white"
+                android:background="@drawable/radio_background_selector"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:id="@+id/rb_low"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:gravity="center"
+                android:text="小"
+                android:background="@drawable/rb_low_gray_backgound"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="人员信息： "
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除该记录">
+        </Button>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="姓名："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18dp"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:hint="Name"
+                    android:textColorHint="@color/mycolor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_bir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="出生年月："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_bir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="none"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="XXXX.XX" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="手机号码："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="phone number" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_edu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="学历："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_edu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="click select" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_gra"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="毕业院校："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_gra"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="click select" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_major"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="专业："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_major"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="click select" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_target"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="应聘岗位："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_target"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="click select" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_skill"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="技能："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_skill"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="click select" />
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#88AAAAFF">
+            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tx_hobby"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="爱好："
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edit_hobby"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical|right"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/mycolor"
+                    android:hint="click select" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_data_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="生成简历（有修改则一并保存）">
+    </Button>
+
+</LinearLayout>
+</ScrollView>

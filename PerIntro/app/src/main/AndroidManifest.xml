@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.perintro">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+
+        android:authorities="com.example.perintro.FileProvider"
+        android:exported="false"
+        android:grantUriPermissions="true"
+
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PerIntro"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/file_paths" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".application.TimePickerActivity">
+        </activity>
+        <activity android:name=".application.DatePickerActivity">
+        </activity>
+        <activity android:name=".application.CalculatorActivity">
+        </activity>
+        <activity android:name=".application.BatteyInfo">
+        </activity>
+        <activity android:name=".application.BannerAnim">
+        </activity>
+        <activity android:name=".application.VibratorDevice">
+        </activity>
+        <activity android:name=".application.SeekBarDemo">
+        </activity>
+        <activity android:name=".application.VolumeActivity">
+        </activity>
+        <activity android:name=".application.SersorActivity">
+        </activity>
+        <activity android:name=".application.AccelerationActivity">
+        </activity>
+        <activity android:name=".application.GyroscopeActivity">
+        </activity>
+        <activity android:name=".application.LightActivity">
+        </activity>
+        <activity android:name=".application.StepActivity">
+        </activity>
+        <activity android:name=".application.DirectionActivity">
+        </activity>
+        <activity android:name=".application.AboutMe">
+        </activity>
+        <activity android:name=".base.SearchActivity">
+        </activity>
+        <activity android:name=".base.ChatInfoActivity">
+        </activity>
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        <!--用于实现标题栏居中-->
+        <Button
+            android:id="@+id/btn_chatroom_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="#00000000"
+            android:stateListAnimator="@null"
+            android:text="" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#00000000"
+            android:stateListAnimator="@null"
+            android:text=""
+            />
+
+        <!--标题栏-->
+        <TextView
+            android:id="@+id/text_label"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="微信" />
+        <!--搜索按钮-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="#00000000"
+            android:stateListAnimator="@null"
+            android:text=""
+            />
+        <!--添加按钮-->
+        <Button
+            android:id="@+id/btn_chatroom_right"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#00000000"
+            android:stateListAnimator="@null"
+            android:text="" />
+</LinearLayout>
