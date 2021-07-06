@@ -1,7 +1,7 @@
 # WaChatPreIntro
 ## 关于该项目
 
-学习Android应用开发的一个期末项目：仿微信界面的个人介绍
+学习Android应用开发的一个期末项目：仿微信布局的个人介绍
 
 使用`ViewPager`做的主页，可以滑动
 
